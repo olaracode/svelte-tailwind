@@ -12,8 +12,15 @@
 	{#each $characters as { name, image, id }}
 		<div class="card">
 			<img src={image} alt="" class="rounded-lg w-full" />
-			<p>{name}</p>
-			<a href={`/character/${id}`}>route</a>
+			<div class="mt-2">
+				<p>{name}</p>
+				<div class="mt-2">
+					<a
+						class="px-5 py-2 rounded-md bg-emerald-200 hover:bg-emerald-400"
+						href={`/character/${id}`}>Details</a
+					>
+				</div>
+			</div>
 		</div>
 	{:else}
 		<p>loading...</p>
