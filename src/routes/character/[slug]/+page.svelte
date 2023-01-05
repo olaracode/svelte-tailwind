@@ -1,6 +1,6 @@
 <script>
 	/** @type {import('./$types').PageData} */
-	import Buttonlink from '../../components/button/buttonlink.svelte';
+	import Buttonlink from '../../_components/button/buttonlink.svelte';
 	export let data;
 	$: character = data.character;
 </script>

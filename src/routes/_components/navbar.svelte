@@ -1,0 +1,11 @@
+<script>
+	let searchTerm = '';
+</script>
+
+<div
+	class="z-50 shadow-md h-50 w-full text-white bg-emerald-400 h-14 flex items-center px-10 py-5 fixed top-0 justify-between"
+>
+	<div>
+		<a class="font-bold text-lg" href="/">Rick and morty</a>
+	</div>
+</div>

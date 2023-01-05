@@ -1,7 +1,9 @@
 <script>
 	import { characters } from './store/character';
+	import LandingCard from './_components/character/landingCard.svelte';
+	import Loader from './_components/loader.svelte';
 	import { onMount } from 'svelte';
-	import Buttonlink from './components/button/buttonlink.svelte';
+	import Buttonlink from './_components/button/buttonlink.svelte';
 	/** @type {import('./$types').PageData} */
 	export let data;
 	onMount(async () => {
@@ -9,18 +11,10 @@
 	});
 </script>
 
-<div class="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-	{#each $characters as { name, image, id }}
-		<div class="card">
-			<img src={image} alt="" class="rounded-lg w-full" />
-			<div class="mt-2">
-				<p>{name}</p>
-				<div class="mt-2">
-					<Buttonlink href={`/character/${id}`} content={'Details'} />
-				</div>
-			</div>
-		</div>
+<div class="landing-grid">
+	{#each $characters as character}
+		<LandingCard {character} />
 	{:else}
-		<p>loading...</p>
+		<Loader />
 	{/each}
 </div>

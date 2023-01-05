@@ -9,5 +9,17 @@
 		padding: theme('spacing.6');
 		box-shadow: theme('boxShadow.xl');
 	}
-	/* ... */
+	.btn {
+		@apply px-5 py-2 rounded-md;
+	}
+	.btn-primary {
+		@apply btn bg-emerald-200 hover:bg-emerald-400;
+	}
+	.btn-warning {
+		@apply btn bg-amber-300 hover:bg-amber-400 text-white;
+	}
+	.landing-grid {
+		@apply grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+		@apply gap-5;
+	}
 }
