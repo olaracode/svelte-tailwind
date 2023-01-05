@@ -1,7 +1,8 @@
 <script>
 	/** @type {import('./$types').PageData} */
+	import Buttonlink from '../../components/button/buttonlink.svelte';
 	export let data;
-	const character = data.character;
+	$: character = data.character;
 </script>
 
 <a href="/" class="hover:text-emerald-200">Volver</a>
@@ -11,15 +12,15 @@
 		<p>{character.name}</p>
 	</div>
 </div>
-<!-- <div class="flex justify-center gap-5 mt-5">
+<div class="flex justify-around items-center gap-5 mt-5 ">
 	{#if character.id !== 1}
-		<a href={`/character/${character.id - 1}`}>previous</a>
+		<Buttonlink href={`${character.id - 1}`} content={'previous'} />
 	{:else}
-		<p class="text-slate-700">previous</p>
+		<Buttonlink disabled={true} content={'previous'} />
 	{/if}
 	{#if character.id !== 20}
-		<a href={`/character/${character.id + 1}`}>next</a>
+		<Buttonlink href={`${character.id + 1}`} content={'next'} />
 	{:else}
-		<p class="text-slate-700">next</p>
+		<Buttonlink disabled={true} content={'next'} />
 	{/if}
-</div> -->
+</div>

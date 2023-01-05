@@ -1,6 +1,7 @@
 <script>
 	import { characters } from './store/character';
 	import { onMount } from 'svelte';
+	import Buttonlink from './components/button/buttonlink.svelte';
 	/** @type {import('./$types').PageData} */
 	export let data;
 	onMount(async () => {
@@ -15,10 +16,7 @@
 			<div class="mt-2">
 				<p>{name}</p>
 				<div class="mt-2">
-					<a
-						class="px-5 py-2 rounded-md bg-emerald-200 hover:bg-emerald-400"
-						href={`/character/${id}`}>Details</a
-					>
+					<Buttonlink href={`/character/${id}`} content={'Details'} />
 				</div>
 			</div>
 		</div>
