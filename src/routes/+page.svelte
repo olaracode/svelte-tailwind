@@ -3,7 +3,6 @@
 	import LandingCard from './_components/character/landingCard.svelte';
 	import Loader from './_components/loader.svelte';
 	import { onMount } from 'svelte';
-	import Buttonlink from './_components/button/buttonlink.svelte';
 	/** @type {import('./$types').PageData} */
 	export let data;
 	onMount(async () => {

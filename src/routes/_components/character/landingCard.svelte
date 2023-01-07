@@ -1,5 +1,7 @@
 <script>
 	import Buttonlink from '../button/buttonlink.svelte';
+	import { favorites } from '../../store/favorites';
+
 	let defaultImage = '/images/portal.png';
 	export let character = {
 		image: defaultImage,
@@ -7,6 +9,11 @@
 		id: 1
 	};
 	let spin = character.image === defaultImage;
+
+	const addFavorite = (character) => {
+		if ($favorites.includes(character)) return;
+		favorites.update((favorites) => [...favorites, character]);
+	};
 </script>
 
 <div class="card">
@@ -15,7 +22,7 @@
 		<p>{character.name}</p>
 		<div class="mt-2 flex justify-between items-center">
 			<Buttonlink href={`/character/${character.id}`} content={'Details'} />
-			<button class="btn-warning">
+			<button class="btn-warning" on:click={addFavorite(character)}>
 				<i class="fas fa-heart" />
 			</button>
 		</div>
