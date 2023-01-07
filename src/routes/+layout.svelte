@@ -6,7 +6,7 @@
 
 <div>
 	<Navbar />
-	<div class="my-16 relative px-10">
+	<div class="my-16 relative px-10 min-h-[75vh]">
 		<slot />
 	</div>
 	<Footer />

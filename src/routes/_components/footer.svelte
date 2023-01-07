@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="z-50 shadow-md h-60 w-full text-white bg-emerald-400 h-14 flex items-center justify-center px-10 py-20 top-0"
+	class="z-50 shadow-md h-60 w-full text-white bg-emerald-400 h-14 flex items-center justify-center px-10 py-20"
 >
 	<div>
 		<h2 class="font-bold text-lg text-center">
